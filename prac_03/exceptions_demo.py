@@ -27,5 +27,3 @@ while denominator == 0:
     denominator = int(input("Enter the denominator: "))
 fraction = numerator / denominator
 print(fraction)
-
-
