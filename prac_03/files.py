@@ -11,20 +11,19 @@ print(f"{new_name}")
 in_file.close()
 
 # 3.
-out_file = open("numbers.txt", 'w')
-print("17\n42\n400", file=out_file)
-out_file.close()
-
+total = 0
 in_file = open("numbers.txt", 'r')
-lines = in_file.readlines()
-number_one = int(lines[0].strip())
-number_two = int(lines[1].strip())
-result = number_one + number_two
-print(f"{result}")
+for i in range(0, 2):
+    number = in_file.readline()
+    total = total + int(number)
+print(total)
 in_file.close()
 
 # 4.
+total = 0
 in_file = open("numbers.txt", 'r')
-file_number = [int(lines) for lines in in_file]
-total = sum(file_number)
-print(f"The total number is: {total}")
+numbers = in_file.readlines()
+for number in numbers:
+    total += int(number)
+print(total)
+in_file.close()
