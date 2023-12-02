@@ -10,9 +10,8 @@ for i in range(0, line_number):
     numbers.clear()
     for g in range(0, 6):
         pick_number = random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER)
-        if pick_number not in numbers:
-            numbers.append(pick_number)
-            numbers.sort()
-        else:
+        while pick_number in numbers:
             pick_number = random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER)
+        numbers.append(pick_number)
+        numbers.sort()
     print(numbers)
