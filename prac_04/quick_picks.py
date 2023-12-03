@@ -14,4 +14,4 @@ for i in range(0, line_number):
             pick_number = random.randint(MINIMUM_NUMBER, MAXIMUM_NUMBER)
         numbers.append(pick_number)
         numbers.sort()
-    print(numbers)
+    print(" ".join(f"{number:2}" for number in numbers))
